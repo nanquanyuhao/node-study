@@ -1,5 +1,5 @@
 {
-    "name": "url-koa",
+    "name": "url2-koa",
     "version": "1.0.0",
     "description": "koa 2 example with url route",
     "main": "app.js",
