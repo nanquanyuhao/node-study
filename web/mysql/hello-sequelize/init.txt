@@ -1,0 +1,39 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : 192.168.235.136_liyh1928
+ Source Server Type    : MySQL
+ Source Server Version : 50732
+ Source Host           : 192.168.235.136:3306
+ Source Schema         : test
+
+ Target Server Type    : MySQL
+ Target Server Version : 50732
+ File Encoding         : 65001
+
+ Date: 26/03/2022 23:33:45
+*/
+
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for pets
+-- ----------------------------
+DROP TABLE IF EXISTS `pets`;
+CREATE TABLE `pets`  (
+  `id` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `gender` tinyint(1) NOT NULL,
+  `birth` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `createdAt` bigint(20) NOT NULL,
+  `updatedAt` bigint(20) NOT NULL,
+  `version` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of pets
+-- ----------------------------
+
+SET FOREIGN_KEY_CHECKS = 1;

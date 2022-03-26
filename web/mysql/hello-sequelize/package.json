@@ -1,13 +1,13 @@
 {
-    "name": "url-koa",
+    "name": "hello-sequelize",
     "version": "1.0.0",
-    "description": "koa2 example with url route",
+    "description": "Hello Sequelize example with async",
     "main": "app.js",
     "scripts": {
         "start": "node --use_strict app.js"
     },
     "keywords": [
-        "koa",
+        "sequelize",
         "async"
     ],
     "author": "Michael Liao",
@@ -17,8 +17,7 @@
         "url": "https://github.com/michaelliao/learn-javascript.git"
     },
     "dependencies": {
-        "koa": "2.0.0",
-        "koa-bodyparser": "3.2.0",
-        "koa-router": "7.0.0"
+        "sequelize": "3.24.1",
+        "mysql": "2.11.1"
     }
 }

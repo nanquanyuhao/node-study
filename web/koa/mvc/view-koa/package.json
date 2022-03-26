@@ -1,14 +1,15 @@
 {
-    "name": "url2-koa",
+    "name": "view-koa",
     "version": "1.0.0",
-    "description": "koa 2 example with url route",
+    "description": "koa 2 example with nunjucks as view",
     "main": "app.js",
     "scripts": {
-        "start": "node url-koa.js"
+        "start": "node --use_strict app.js"
     },
     "keywords": [
         "koa",
-        "async"
+        "async",
+        "nunjucks"
     ],
     "author": "Michael Liao",
     "license": "Apache-2.0",
