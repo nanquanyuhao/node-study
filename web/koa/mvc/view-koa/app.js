@@ -8,7 +8,7 @@ const templating = require('./templating');
 
 const app = new Koa();
 
-const isProduction = process.env.NODE_ENV === 'production1';
+const isProduction = process.env.NODE_ENV === 'production';
 
 // log request URL:
 // 记录URL以及页面执行时间
@@ -26,6 +26,12 @@ app.use(async (ctx, next) => {
 if (! isProduction) {
     let staticFiles = require('./static-files');
     app.use(staticFiles('/static/', __dirname + '/static'));
+}
+
+// 视频资源处理
+if (! isProduction) {
+    let staticFiles = require('./static-files');
+    app.use(staticFiles('/video/', __dirname + '/video'));
 }
 
 // parse request body:
