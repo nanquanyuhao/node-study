@@ -37,6 +37,8 @@ $(function () {
 function executeJs() {
     try {
         var code = $('#code').val();
+        // 经过测试，直接在浏览器 console 中给 window.vm.* 某属性赋值也可以（不加 window. 也可）
+        // new Function 中参数不加第一句，直接给 vm 进行调整也可，貌似直接拿到了 window.vm
         var fn = new Function('var vm = window.vm;\n' + code);
         // 1. 执行 var vm = window.vm; 将之前创建的 ViewModel 拿到赋值引用给 vm
         // 2. 执行输入的内容如：vm.name = 'Bob'; 将 ViewModel 中的 name 修改为 Bob
